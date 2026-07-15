@@ -53,6 +53,8 @@ Upload a resume, receive personalized interview questions, answer through text o
                  +----------------------+
 
 ## Project Structure
+
+
 ```
 ai-interview-coach/
   backend/
@@ -69,7 +71,7 @@ ai-interview-coach/
       components/       Navbar, Card, ScoreChart
       pages/             Dashboard, ResumeUpload, InterviewSetup, InterviewSession, Report, History
       App.jsx, main.jsx, index.css
-```
+
 
 ## Setup
 
