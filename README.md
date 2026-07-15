@@ -1,4 +1,8 @@
 # 🤖 AI Interview Coach
+![React](https://img.shields.io/badge/React-19-blue)
+![Node.js](https://img.shields.io/badge/Node.js-Express-green)
+![Groq](https://img.shields.io/badge/AI-Groq-orange)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
 An AI-powered mock interview platform that helps students and job seekers prepare for technical and HR interviews.
 
