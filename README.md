@@ -65,7 +65,7 @@ AI-Interview-Coach
 └── .gitignore
 ```
 
-## Setup
+## ⚙️Setup
 
 ### 1. Backend
 ```bash
