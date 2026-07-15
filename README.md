@@ -52,10 +52,9 @@ Upload a resume, receive personalized interview questions, answer through text o
                  | In-Memory Data Store |
                  +----------------------+
 
+```
 ## Project Structure
 
-
-```
 ai-interview-coach/
   backend/
     data/store.js        In-memory store: { resumes, interviews, questions, answers, feedbacks }
