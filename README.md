@@ -29,7 +29,7 @@ ai-interview-coach/
     middleware/           upload (multer), error handling  — no auth middleware
     controllers/           resume, interview, dashboard      — no auth controller
     routes/                resumeRoutes, interviewRoutes, dashboardRoutes
-    services/               aiService.js (OpenAI prompts), resumeParser.js (pdf/docx text extraction)
+    services/               aiService.js (Groq AI prompts), resumeParser.js (pdf/docx text extraction)
     server.js
   frontend/
     src/
@@ -47,7 +47,7 @@ ai-interview-coach/
 cd backend
 npm install
 cp .env.example .env
-# edit .env: set OPENAI_API_KEY
+# edit .env: set GROQ_API_KEY
 npm run dev
 ```
 Backend runs on `http://localhost:5000`. 
@@ -63,8 +63,7 @@ npm run dev
 Frontend runs on `http://localhost:5173`.
 
 ### 3. OpenAI API Key
-Get a key from https://platform.openai.com/api-keys and set `OPENAI_API_KEY` in
-`backend/.env`.
+Get a free API key from https://console.groq.com/keys and set `GROQ_API_KEY` in `backend/.env`.
 
 ## REST API Overview
 
@@ -95,8 +94,7 @@ publicly without adding auth back** — anyone with the URL can read/delete all 
 
 ## Deployment
 - **Frontend (Vercel)**: root directory `frontend`, env var `VITE_API_URL` → your backend `/api` URL.
-- **Backend (Render)**: root directory `backend`, build `npm install`, start `npm start`,
-  env vars `OPENAI_API_KEY`, `CLIENT_URL` (your Vercel URL). No database service needed.
+- **Backend (Render)**: root directory `backend`, build `npm install`, start `npm start`, env vars `GROQ_API_KEY`, `MODEL`, `CLIENT_URL`.
 
 ⚠️ Note: most free hosting tiers (like Render's free plan) restart/sleep the
 process periodically — since storage is in-memory, all data will be wiped on
