@@ -25,6 +25,33 @@ Upload a resume, receive personalized interview questions, answer through text o
 - AI: Groq API (Llama 3.1)
 - Voice: browser-native Web Speech API
 
+ ## 🏗️ Architecture
+
+```text
+                 +----------------------+
+                 |   React + Vite UI    |
+                 +----------+-----------+
+                            |
+                            | REST API (Axios)
+                            ▼
+                 +----------------------+
+                 |  Node.js + Express   |
+                 +----------+-----------+
+                            |
+          +-----------------+-----------------+
+          |                                   |
+          ▼                                   ▼
++----------------------+          +----------------------+
+| Resume Parser        |          | Groq AI (Llama 3.1) |
+| (PDF/DOCX Extractor) |          | Question Generation  |
++----------------------+          | Answer Evaluation    |
+                                  +----------------------+
+                            |
+                            ▼
+                 +----------------------+
+                 | In-Memory Data Store |
+                 +----------------------+
+
 ## Project Structure
 ```
 ai-interview-coach/
