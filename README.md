@@ -1,29 +1,24 @@
-# AI Interview Coach — No-Database Edition
+# 🤖 AI Interview Coach
 
-An AI-powered mock interview platform. Upload a resume, get AI-generated interview
-questions tailored to a target company/role, answer by voice or text, and get
-detailed AI evaluation with a final report and progress tracking.
+An AI-powered mock interview platform that helps students and job seekers prepare for technical and HR interviews.
 
-**No database, no auth.** This version runs entirely in memory — perfect for a
-quick portfolio demo. Data (resumes, interviews, questions, answers, feedback)
-lives in plain JS arrays on the server and resets whenever the server restarts.
+Upload a resume, receive personalized interview questions, answer through text or voice, and get AI-powered evaluation with detailed feedback and performance analytics.
 
-## Features
-- Resume upload (PDF/DOCX) with text extraction
-- AI question generation (OpenAI) based on resume + company/role/type/difficulty
-- Interview session: text or voice mode (browser Speech Recognition), timer,
-  progress bar, next/previous/skip
-- AI evaluation per answer (8 scoring dimensions: technical accuracy, communication,
-  confidence, grammar, completeness, logical thinking, problem solving, professionalism)
-  plus strengths/weaknesses/missed points/ideal answer/tips
-- Final report: score breakdown, radar chart, readiness %, suggested topics
-- Dashboard with aggregate stats + progress chart
-- History: view / delete / retake
+## ✨ Features
+
+- 📄 Resume Upload (PDF/DOCX)
+- 🤖 AI-Generated Interview Questions
+- 🎙 Voice & Text Interview Modes
+- 📊 AI Answer Evaluation
+- 📈 Performance Dashboard
+- 📑 Final Interview Report
+- 📚 Interview History
+- ⚡ Fast REST API Backend
 
 ## Tech Stack
 - Frontend: React + Vite, Tailwind CSS, React Router, Framer Motion, Chart.js, Axios
-- Backend: Node.js, Express — **no database**
-- AI: OpenAI API (`gpt-4o-mini` by default, configurable via `OPENAI_MODEL`)
+- Backend: Node.js, Express
+- AI: Groq API (Llama 3.1)
 - Voice: browser-native Web Speech API
 
 ## Project Structure
@@ -55,7 +50,7 @@ cp .env.example .env
 # edit .env: set OPENAI_API_KEY
 npm run dev
 ```
-Backend runs on `http://localhost:5000`. No MongoDB, no Atlas, no auth setup needed.
+Backend runs on `http://localhost:5000`. 
 
 ### 2. Frontend
 ```bash
