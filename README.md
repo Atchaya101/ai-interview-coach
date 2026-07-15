@@ -53,26 +53,17 @@ Upload a resume, receive personalized interview questions, answer through text o
                  +----------------------+
 
 
-
 ```
-## Project Structure
+## 📁 Project Structure
 
-ai-interview-coach/
-  backend/
-    data/store.js        In-memory store: { resumes, interviews, questions, answers, feedbacks }
-    middleware/           upload (multer), error handling  — no auth middleware
-    controllers/           resume, interview, dashboard      — no auth controller
-    routes/                resumeRoutes, interviewRoutes, dashboardRoutes
-    services/               aiService.js (Groq AI prompts), resumeParser.js (pdf/docx text extraction)
-    server.js
-  frontend/
-    src/
-      hooks/useSpeechRecognition.js
-      services/api.js (plain axios instance, no token handling)
-      components/       Navbar, Card, ScoreChart
-      pages/             Dashboard, ResumeUpload, InterviewSetup, InterviewSession, Report, History
-      App.jsx, main.jsx, index.css
-
+```text
+AI-Interview-Coach
+│
+├── frontend          # React + Vite application
+├── backend           # Express REST API
+├── README.md
+└── .gitignore
+```
 
 ## Setup
 
